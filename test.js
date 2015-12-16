@@ -22,9 +22,9 @@ test('it matches all multi-character emoji', function (assert) {
 
 test('the matches function works', function (assert) {
   var matches = match('oh hi doggy 🐶, are you from 🇨🇦?')
-  assert.deepEqual(matches, [
-    { value: '🐶', index: 12, length: 2 },
-    { value: '🇨🇦', index: 29, length: 4 }
-  ], 'it does')
+  assert.deepEqual(matches, {
+    12: '🐶',
+    29: '🇨🇦'
+  }, 'it does')
   assert.end()
 })

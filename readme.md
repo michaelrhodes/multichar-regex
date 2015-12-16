@@ -19,8 +19,8 @@ var regex = require('multichar-regex')
 var matches = require('multichar-regex/matches')
 
 matches('oh hi, doggy 🐶 meet the sun: ☀️')
-=> [ { value: '🐶', index: 13, length: 2 },
-     { value: '☀️', index: 30, length: 2 } ]
+// index: value
+=> { '13': '🐶', '30': '☀️' }
 ```
 
 ## License
